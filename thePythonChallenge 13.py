@@ -36,11 +36,11 @@ p = ProxyTransport()
 ###################################################
 
 print u"debut du programme"
-#set http_proxy=http://proxy.myproxy.com
 proxy = xmlrpclib.Server("http://www.pythonchallenge.com/pc/phonebook.php", transport=p)
 #version sans proxy:
 #proxy = xmlrpclib.Server("http://www.pythonchallenge.com/pc/phonebook.php")
 
 print proxy.phone("Bert") # => 555-ITALY
+print proxy.phone("Leopold")
 
 print "fin du prg."
